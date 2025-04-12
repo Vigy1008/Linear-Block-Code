@@ -134,29 +134,29 @@ Enter the Parity bits : 3
 Enter the Message bits : 3
 Enter the row values : 1 (Separated by space) : 1 0 0
 Enter the row values : 2 (Separated by space) : 1 0 1
-Enter the row values : 3 (Separated by space) : 1 1 1
+Enter the row values : 3 (Separated by space) : 1 1 0
 **********
 The Generator Matrix is: 
 1 0 0 1 0 0
 1 0 1 0 1 0
-1 1 1 0 0 1
+1 1 0 0 0 1
 **********
 Message Bits  Codeword   Hamming Weight
 0 0 0	0 0 0 0 0 0	0
-0 0 1	1 1 1 0 0 1	4
+0 0 1	1 1 0 0 0 1	3
 0 1 0	1 0 1 0 1 0	3
-0 1 1	0 1 0 0 1 1	3
+0 1 1	0 1 1 0 1 1	4
 1 0 0	1 0 0 1 0 0	2
-1 0 1	0 1 1 1 0 1	4
+1 0 1	0 1 0 1 0 1	3
 1 1 0	0 0 1 1 1 0	3
-1 1 1	1 1 0 1 1 1	5
+1 1 1	1 1 1 1 1 1	6
 **********
 Minimum Hamming distance : 2
 **********
 Parity Check Matrix
 1 0 0 1 1 1
 0 1 0 0 0 1
-0 0 1 0 1 1
+0 0 1 0 1 0
 **********
 Parity Check Matrix Transpose
 0 0 0
@@ -165,8 +165,8 @@ Parity Check Matrix Transpose
 0 0 1
 1 0 0
 1 0 1
-1 1 1
-Enter the error codeword : 0 0 1 0 0 0
+1 1 0
+Enter the error codeword : 1 1 0 1 1 1
 The error postion is : 0 0 1 0 0 0
 The size is : 7
 **********
@@ -177,12 +177,16 @@ Syndrome Matrix
 0 0 1	0 0 0 1 0 0 0
 1 0 0	0 0 0 0 1 0 0
 1 0 1	0 0 0 0 0 1 0
-1 1 1	0 0 0 0 0 0 1
+1 1 0	0 0 0 0 0 0 1
 **********
 Syndeome of given received codeword is : 0 0 1
-The correct codeword is : 0 0 0 0 0 0
-
+The correct codeword is : 1 1 1 1 1 1
 ```
+Manual Calculations:
+![WhatsApp Image 2025-04-12 at 15 59 40_ea293a71](https://github.com/user-attachments/assets/261fa442-0a14-4ca7-8874-f6afdf9310b3)
+![WhatsApp Image 2025-04-12 at 15 59 39_3d346b4f](https://github.com/user-attachments/assets/ffda707a-d7e2-4839-adfd-662e50070cdb)
+
+
 
 ## Results:
 The Linear Block Code was successfully implemented. Codewords were generated, and errors in received codewords were detected and corrected using the syndrome decoding method.
